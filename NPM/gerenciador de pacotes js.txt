@@ -1,0 +1,24 @@
+-----------------------------------------------------------------
+- Pre-requisitos:
+Node.JS
+
+-----------------------------------------------------------------
+- Diferenças entre pacote de modulo:
+
+É chamado de pacote (package) quando:
+
+um diretório contém um programa descrito por um arquivo “package.json”
+um arquivo tarball comprimido com gzip que contenha (a)
+uma URL que contenha (b)
+um <nome>@<versão> que é publicado no registro com (c)
+um <nome>@<versão> que aponte para (d)
+um <nome> que possua uma tag “latest” que satisfaça (e)
+uma URL de um repositório git que, quando clonado, resulte em (a)
+
+É chamado de módulo (module) quando:
+
+um diretório com um arquivo “package.json” que contenha um campo “main”
+um diretório com um arquivo “index.js”
+um arquivo JavaScript
+
+-----------------------------------------------------------------

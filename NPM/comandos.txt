@@ -1,0 +1,79 @@
+- Pre-requisitos:
+Instalar Node.js
+
+- verificar versão:
+$ npm -v
+
+- atualizar versão:
+$ npm install npm@latest -g
+
+- busca npm por palavra chave (modulo, framework, etc)
+$ npm search angular
+ou entrar no site npmjs.com e pesquisar por lá
+
+- instalar pacotes
+$ npm install nomepacote
+Ao instalar pacotes, é criado uma pasta chamada node_modules e detro ficam os pacotes
+
+- criar package json  //packaje json lista todas as dependencias de download de um projeto
+$ npm init
+
+- instalar as dependências q existem no package json
+$ npm install
+ele vai ler o package json e instalar tudo q consta como dependência
+
+- atualizar a lista de dependencias
+$ npm install pacote_novo --save ou -S
+
+- salvar pacote apenas para desenvolvimento
+$ npm install webpack --save-dev ou -D
+
+- instalar versão específica de um pacote
+$ npm install webpack@4.1.2
+
+- instalar uma versão específica mas sem saber a correta
+$ npm install webpack@ ">2.0.0 <4.0.0"
+
+- atualizar uma versão de pacote instalado
+$ npm outdated
+Ele vai ler o packageJson, mostrando a versão do q está lá e sugerindo as versões mais recentes
+$ npm update
+Vai atualizar o pacote para a versão mais recente e com menos riscos de quebrar a aplicação
+
+- desinstalar pacotes
+$ npm uninstall nomepacote
+
+- listar pacotes instalados
+$ npm ls 
+
+- listar pacotes instaldos de forma global
+$ npm ls -g --depth=0
+
+- criar e publicar um pacote npm
+$ npm init
+Criar um arquivo com o nome destacado no campo "main" do packageJson. Ex: index.js
+Nesse arquivo colocar o código JS
+Para publicar precisa criar conta no portal npm via portal ou pelo terminal com o comando
+$ npm adduser 
+Para logar na conta
+$ npm login
+Ir ao diretório do pacote criado e dar o comando
+$ npm publish .gitignore node_modules
+
+- atualizar o pacote upado
+existem 3 palavras chaves: 
+    patch(alterações que não interferem em nada no código)1.0.0 vira 1.0.1
+    minor(adicionar funções sem mexer em nada antigo)1.0.0 vira 1.1.0
+    major(muda alguma coisa grande dentro da api)1.0.0 vira 2.0.0
+$ npm version minor
+$ npm publish
+
+- scripts atualizam processos npm
+Dentro package.json emtrar no campo scripts e colocar um nome do comando e depois do : o q ele vai fazer
+"scripts": {
+    "start":"node index.js"
+    "lista": "dir"
+}
+Executa com o comando dentro do terminal
+$ npm run nomeDaAutomacao
+Ex: $ npm run lista
